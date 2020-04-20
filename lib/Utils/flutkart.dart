@@ -1,6 +1,6 @@
 class Flutkart {
-  static const String name = "Flutkart";
-  static const String store = "Online Store\n For Everyone";
+  static const String name = "لا شئ يطلق العظمة الكامنة بداخلنا  ";
+  static const String store = "مثل الرغبة في مساعدة الآخرين وخدمتهم";
   static const String wt1 = "WELCOME";
   static const String wc1 =
       "Flutkart is Premium Online Shopping\n Platform for Everyone";

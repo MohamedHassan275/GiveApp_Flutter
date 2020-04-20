@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:give_app_flutter/Utils/flutkart.dart';
 import 'package:give_app_flutter/Utils/my_navigator.dart';
 
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -21,11 +20,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.white),
+            child: new DecoratedBox(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new AssetImage("img/background_splash_screen.png"),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -34,18 +40,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 flex: 2,
                 child: Container(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.indigo,
-                        radius: 50.0,
-                        child: Icon(
-                          Icons.shopping_cart,
-                          color: Colors.white,
-                          size: 50.0,
-                        ),
+                      new Padding(
+                        padding: EdgeInsets.all(30.0),
                       ),
-                      Padding(
+                      new Image.asset('img/logo.png',
+                          width: 150.0, height: 150.0,
+                          alignment: Alignment.center),
+                     new Padding(
                         padding: EdgeInsets.only(top: 10.0),
                       ),
                       Text(
@@ -53,33 +55,40 @@ class _SplashScreenState extends State<SplashScreen> {
                         style: TextStyle(
                             color: Colors.indigo,
                             fontWeight: FontWeight.bold,
-                            fontSize: 24.0),
+                            fontSize: 17.0),
+                      ),
+                      Text(
+                        Flutkart.store,
+                        style: TextStyle(
+                            color: Colors.indigo,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17.0),
                       )
                     ],
                   ),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CircularProgressIndicator(),
-                    Padding(
-                      padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    Text(
-                      Flutkart.store,
-                      softWrap: true,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
-                          color: Colors.deepPurple),
-                    )
-                  ],
-                ),
-              )
+//              Expanded(
+//                flex: 1,
+//                child: Column(
+//                  mainAxisAlignment: MainAxisAlignment.center,
+//                  children: <Widget>[
+//                    CircularProgressIndicator(),
+//                    Padding(
+//                      padding: EdgeInsets.only(top: 20.0),
+//                    ),
+//                    Text(
+//                      Flutkart.store,
+//                      softWrap: true,
+//                      textAlign: TextAlign.center,
+//                      style: TextStyle(
+//                          fontWeight: FontWeight.bold,
+//                          fontSize: 18.0,
+//                          color: Colors.deepPurple),
+//                    )
+//                  ],
+//                ),
+//              )
             ],
           )
         ],
