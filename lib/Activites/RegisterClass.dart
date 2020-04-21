@@ -179,7 +179,7 @@ class RegisterClickLisner extends State<RegisterCliant> {
                               ),
                               child: new Center(
                                 child: new Text(
-                                  'Login',
+                                  Flutkart.Register,
                                   style: new TextStyle(
                                       fontSize: 17.0, color: Colors.white),
                                 ),

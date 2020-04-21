@@ -6,9 +6,9 @@ class Flutkart {
   static const String RegisterNow = "تسجيل جديد";
   static const String email = "email";
   static const String password = "password";
-  static const String wc3 =
-      "Add to Cart All Product You need\n And Checkout the Order";
-  static const String wt4 = "VERIFY AND RECEIVE";
+  static const String Login =
+      "تسجيل دخول ";
+  static const String Register = "تسجيل اشتراك";
   static const String wc4 =
       "We Will Verify Your Order\n Pay the bill and Receive the Product";
   static const String skip = "SKIP";

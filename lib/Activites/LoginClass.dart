@@ -129,7 +129,7 @@ class HomeClickLiser extends State<LoginCliant> {
                               ),
                               child: new Center(
                                 child: new Text(
-                                  'Login',
+                                  Flutkart.Login,
                                   style: new TextStyle(
                                       fontSize: 17.0, color: Colors.white),
                                 ),
