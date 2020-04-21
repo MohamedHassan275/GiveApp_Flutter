@@ -51,14 +51,14 @@ class _SplashScreenState extends State<SplashScreen> {
                         padding: EdgeInsets.only(top: 10.0),
                       ),
                       Text(
-                        Flutkart.name,
+                        Flutkart.SplashText1,
                         style: TextStyle(
                             color: Colors.indigo,
                             fontWeight: FontWeight.bold,
                             fontSize: 17.0),
                       ),
                       Text(
-                        Flutkart.store,
+                        Flutkart.SplashText2,
                         style: TextStyle(
                             color: Colors.indigo,
                             fontWeight: FontWeight.bold,

@@ -62,30 +62,47 @@ class HomeClickLiser extends State<LoginCliant> {
                               height: 35.0,
                               alignment: Alignment.center),
                           new Padding(padding: EdgeInsets.all(10.0)),
-                          new TextField(
-                            decoration: new InputDecoration(
-                              icon: new Icon(
-                                Icons.account_circle,
-                                color: Colors.indigo,
-                              ),
-                              labelText: 'your email',
-                              hintText: 'email',
-                            ),
-                            keyboardType: TextInputType.emailAddress,
-                            onChanged: OnChangeValue,
+//                          new TextField(
+//                            decoration: new InputDecoration(
+//                            //  border: OutlineInputBorder(),
+//                              icon: new Icon(
+//                                Icons.account_circle,
+//                                color: Colors.indigo,
+//                              ),
+//                              labelText: 'your email',
+//                              hintText: 'email',
+//                            ),
+//                            keyboardType: TextInputType.emailAddress,
+//                            onChanged: OnChangeValue,
+//                          ),
+                          new Container(
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.center,
+                            child: new Stack(alignment: Alignment.center, children: <Widget>[
+                              Image(image: AssetImage('img/edit_text_image.png')),
+                             new TextField(
+                                  textAlign: TextAlign.center,
+                                  autocorrect: false,
+                                  decoration:
+                                  //disable single line border below the text field
+                                  new InputDecoration.collapsed(hintText:Flutkart.email,
+                                      hintStyle: new TextStyle(fontSize: 17.0,fontStyle: FontStyle.normal))),
+                            ]),
                           ),
-                          new Padding(padding: EdgeInsets.all(10.0)),
-                          new TextField(
-                            decoration: new InputDecoration(
-                              icon: new Icon(
-                                Icons.lock,
-                                color: Colors.blue,
-                              ),
-                              labelText: 'your password',
-                              hintText: 'password',
-                            ),
-                            keyboardType: TextInputType.visiblePassword,
-                            onChanged: OnChangeValue,
+                          new Padding(padding: EdgeInsets.all(5.0)),
+                          new Container(
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.center,
+                            child: new Stack(alignment: Alignment.center, children: <Widget>[
+                              Image(image: AssetImage('img/edit_text_image.png')),
+                              new TextField(
+                                  textAlign: TextAlign.center,
+                                  autocorrect: false,
+                                  decoration:
+                                  //disable single line border below the text field
+                                  new InputDecoration.collapsed(hintText: Flutkart.password,
+                                      hintStyle: new TextStyle(fontSize: 17.0,fontStyle: FontStyle.normal)),),
+                            ]),
                           ),
                           new Padding(padding: EdgeInsets.all(15.0)),
                            Text(
