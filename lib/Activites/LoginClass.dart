@@ -76,42 +76,58 @@ class HomeClickLiser extends State<LoginCliant> {
 //                            onChanged: OnChangeValue,
 //                          ),
                           new Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(5.0),
                             alignment: Alignment.center,
-                            child: new Stack(alignment: Alignment.center, children: <Widget>[
-                              Image(image: AssetImage('img/edit_text_image.png')),
-                             new TextField(
-                                  textAlign: TextAlign.center,
-                                  autocorrect: false,
-                                  decoration:
-                                  //disable single line border below the text field
-                                  new InputDecoration.collapsed(hintText:Flutkart.email,
-                                      hintStyle: new TextStyle(fontSize: 17.0,fontStyle: FontStyle.normal))),
-                            ]),
+                            child: new Stack(
+                                alignment: Alignment.center,
+                                children: <Widget>[
+                                  new Image(
+                                      image: AssetImage(
+                                          'img/edit_text_image.png')),
+                                  new TextField(
+                                      textAlign: TextAlign.center,
+                                      maxLines: 1,
+                                      autocorrect: false,
+                                      decoration: new InputDecoration.collapsed(
+                                          hintText: Flutkart.email,
+                                          hintStyle: new TextStyle(
+                                              fontSize: 17.0,
+                                              fontStyle: FontStyle.normal))),
+                                ]),
                           ),
                           new Padding(padding: EdgeInsets.all(5.0)),
                           new Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(5.0),
                             alignment: Alignment.center,
-                            child: new Stack(alignment: Alignment.center, children: <Widget>[
-                              Image(image: AssetImage('img/edit_text_image.png')),
-                              new TextField(
-                                  textAlign: TextAlign.center,
-                                  autocorrect: false,
-                                  decoration:
-                                  //disable single line border below the text field
-                                  new InputDecoration.collapsed(hintText: Flutkart.password,
-                                      hintStyle: new TextStyle(fontSize: 17.0,fontStyle: FontStyle.normal)),),
-                            ]),
+                            child: new Stack(
+                                alignment: Alignment.center,
+                                children: <Widget>[
+                                  Image(
+                                      image: AssetImage(
+                                          'img/edit_text_image.png')),
+                                  new TextField(
+                                    textAlign: TextAlign.center,
+                                    maxLines: 1,
+                                    autocorrect: false,
+                                    decoration:
+                                        //disable single line border below the text field
+                                        new InputDecoration.collapsed(
+                                            hintText: Flutkart.password,
+                                            hintStyle: new TextStyle(
+                                                fontSize: 17.0,
+                                                fontStyle: FontStyle.normal)),
+                                  ),
+                                ]),
                           ),
                           new Padding(padding: EdgeInsets.all(15.0)),
-                           Text(
-                             Flutkart.forgetPassword,
-                             style: new TextStyle(color: Colors.black,fontSize: 17.0,
-                               fontStyle: FontStyle.italic,),
-
-
-                           ),
+                          Text(
+                            Flutkart.forgetPassword,
+                            style: new TextStyle(
+                              color: Colors.black,
+                              fontSize: 17.0,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
                           new Padding(padding: EdgeInsets.all(10.0)),
                           new InkWell(
                             onTap: () => print('hello'),
@@ -120,11 +136,17 @@ class HomeClickLiser extends State<LoginCliant> {
                               height: 37.0,
                               decoration: new BoxDecoration(
                                 color: Colors.blueAccent,
-                                border: new Border.all(color: Colors.blueAccent, width: 1.0),
+                                border: new Border.all(
+                                    color: Colors.blueAccent, width: 1.0),
                                 borderRadius: new BorderRadius.circular(25.0),
                               ),
-                              child: new Center(child: new Text('Login', style: new TextStyle(fontSize: 17.0,
-                                  color: Colors.white),),),
+                              child: new Center(
+                                child: new Text(
+                                  'Login',
+                                  style: new TextStyle(
+                                      fontSize: 17.0, color: Colors.white),
+                                ),
+                              ),
                             ),
                           ),
                           new Padding(padding: EdgeInsets.all(15.0)),
@@ -140,16 +162,20 @@ class HomeClickLiser extends State<LoginCliant> {
                 children: <Widget>[
                   new Text(
                     Flutkart.RegisterNow,
-                    style: new TextStyle(color: Colors.red,fontSize: 19.0,
-                      fontStyle: FontStyle.normal,),
+                    style: new TextStyle(
+                      color: Colors.red,
+                      fontSize: 19.0,
+                      fontStyle: FontStyle.normal,
+                    ),
                   ),
-
                   new Padding(padding: EdgeInsets.all(2.0)),
-                  new  Text(
+                  new Text(
                     Flutkart.notAccount,
-                    style: new TextStyle(color: Colors.grey,fontSize: 19.0,
-                      fontStyle: FontStyle.normal,),
-
+                    style: new TextStyle(
+                      color: Colors.grey,
+                      fontSize: 19.0,
+                      fontStyle: FontStyle.normal,
+                    ),
                   ),
                 ],
               )
