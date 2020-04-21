@@ -6,11 +6,11 @@ class Flutkart {
   static const String RegisterNow = "تسجيل جديد";
   static const String email = "email";
   static const String password = "password";
-  static const String Login =
-      "تسجيل دخول ";
+  static const String Login = "تسجيل دخول ";
   static const String Register = "تسجيل اشتراك";
-  static const String wc4 =
-      "We Will Verify Your Order\n Pay the bill and Receive the Product";
+  static const String LogOut = "تسجيل الخروج";
+  static const String ChoseHospitalOrSusality1 = "اختر ما بين المستشفيات";
+  static const String ChoseHospitalOrSusality2 = "والجمعيات الخيرية";
   static const String skip = "SKIP";
   static const String next = "NEXT";
   static const String gotIt = "GOT IT";

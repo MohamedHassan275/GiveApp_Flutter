@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:give_app_flutter/Utils/flutkart.dart';
 
 
 class HomeTabBar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return HomeTabBarClick ();
+    return HomeTabBarClick();
   }
 
 
@@ -42,97 +42,131 @@ class HomeTabBarClick extends State<HomeTabBar> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return  Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar '),
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
+    return new Scaffold(
+      body: new Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Container(
+            child: new DecoratedBox(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new AssetImage("img/backgroung_hand_screen.png"),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            title: Text('Business'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('School'),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
-    );
-  }
-}
-
-
-class HomeDetails extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        title: new Text('Home Screen'),
-        backgroundColor: Colors.indigo,
-        actions: <Widget>[
-          new IconButton(
-              icon: new Icon(Icons.more_vert),
-              onPressed: () => debugPrint('more')),
-        ],
-      ),
-      body: new Container(
-          alignment: Alignment.center,
-          child: new Column(
+          new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Text(
-                "my name is Mohamed Hassan ",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  color: Colors.cyan,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
+              new Padding(padding: EdgeInsets.only(bottom: 125.0)),
+              new Card(
+                elevation: 7.0,
+                margin: EdgeInsets.all(25.0),
+                child: new Container(
+                  padding: EdgeInsets.all(15.0),
+                  child: new Column(
+                    children: <Widget>[
+                      new Padding(padding: EdgeInsets.all(10.0)),
+                      new Column(
+                        children: <Widget>[
+                          new InkWell(
+                            onTap: () => null,
+                            child: new Container(
+                              child: new Text(
+                                Flutkart.ChoseHospitalOrSusality1,
+                                style: new TextStyle(
+                                    fontSize: 17.0,
+                                    color: Colors.blueGrey,
+                                    fontStyle: FontStyle.italic),
+                              ),
+                            ),
+                          ),
+                          new Padding(padding: EdgeInsets.all(2.0)),
+                          new InkWell(
+                            onTap: () => null,
+                            child: new Container(
+                              child: new Text(
+                                Flutkart.ChoseHospitalOrSusality2,
+                                style: new TextStyle(
+                                    fontSize: 17.0,
+                                    color: Colors.blueGrey,
+                                    fontStyle: FontStyle.italic),
+                              ),
+                            ),
+                          ),
+                          new Padding(padding: EdgeInsets.all(10.0)),
+                          new Container(
+                              padding: EdgeInsets.all(5.0),
+                              alignment: Alignment.center,
+                              child: new Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  new Image.asset('img/gmaia_screen.png',
+                                      width: 100.0,
+                                      height: 100.0,
+                                      alignment: Alignment.center),
+                                  new Padding(padding: EdgeInsets.all(10.0)),
+                                  new Image.asset('img/hospital_screen.png',
+                                      width: 100.0,
+                                      height: 100.0,
+                                      alignment: Alignment.center),
+                                ],
+                              )
+
+                          ),
+                          new Padding(padding: EdgeInsets.all(25.0)),
+
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-              new Text(
-                "i`m 24 years old  ",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-              new Text(
-                "i live in sohag saqulta ",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  color: Colors.indigo,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-              new Text(
-                "i`m work android developer ",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  color: Colors.indigoAccent,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
+
+              new Container(
+                child: new Column(
+                  children: <Widget>[
+                    new Image.asset('img/logout_screen.png',
+                        width: 200.0,
+                        height: 200.0,
+                        alignment: Alignment.center),
+                  ],
+                )
+//                  new InkWell(
+//                    onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
+//                    child: new Container(
+//                      child: new Text(
+//                        Flutkart.LogOut,
+//                        style: new TextStyle(
+//                            fontSize: 19.0, color: Colors.grey),
+//                      ),,
+              )
+//              new Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  new Image.asset('img/logout_screen.png',
+//                      width: 100.0,
+//                      height: 100.0,
+//                      alignment: Alignment.center),
+////                  new InkWell(
+////                    onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
+////                    child: new Container(
+////                      child: new Text(
+////                        Flutkart.LogOut,
+////                        style: new TextStyle(
+////                            fontSize: 19.0, color: Colors.grey),
+////                      ),
+////                    ),
+////                  ),
+//                ],
+//              )
             ],
-          )),
+          ),
+        ],
+      ),
     );
   }
 }
+
+
