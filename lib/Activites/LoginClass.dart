@@ -1,7 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
-
+import 'package:give_app_flutter/Utils/flutkart.dart';
 
 class LoginCliant extends StatefulWidget {
   @override
@@ -27,99 +26,120 @@ class HomeClickLiser extends State<LoginCliant> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-
       body: new Stack(
+        fit: StackFit.expand,
         children: <Widget>[
           Container(
             child: new DecoratedBox(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("img/background_splash_screen.png"),
+                  image: new AssetImage("img/backgroung_hand_screen.png"),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-        new Column(
-              children: <Widget>[
-
-                new Card(
-                  elevation: 7.0,
-                  margin:EdgeInsets.all(25.0),
-                  child:  new Container(
-                    child: new Column(
-                      children: <Widget>[
-                        new Column(
-                          children: <Widget>[
-                            new TextField(
-                              autocorrect: true,
-                              autofocus: true,
-                              decoration: new InputDecoration(
-                                icon: new Icon(Icons.account_circle,color: Colors.indigo,),
-                                labelText: 'your email',
-                                hintText: 'email',
+          new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Padding(padding: EdgeInsets.only(bottom: 125.0)),
+              new Card(
+                elevation: 7.0,
+                margin: EdgeInsets.all(25.0),
+                child: new Container(
+                  padding: EdgeInsets.all(15.0),
+                  child: new Column(
+                    children: <Widget>[
+                      new Padding(padding: EdgeInsets.all(10.0)),
+                      new Column(
+                        children: <Widget>[
+                          new Image.asset('img/ic_group_add.png',
+                              width: 35.0,
+                              height: 35.0,
+                              alignment: Alignment.center),
+                          new Padding(padding: EdgeInsets.all(10.0)),
+                          new TextField(
+                            decoration: new InputDecoration(
+                              icon: new Icon(
+                                Icons.account_circle,
+                                color: Colors.indigo,
                               ),
-                              keyboardType: TextInputType.emailAddress,
-                              onChanged: OnChangeValue,
+                              labelText: 'your email',
+                              hintText: 'email',
                             ),
-                            new TextField(
-                              autocorrect: true,
-                              autofocus: true,
-                              decoration: new InputDecoration(
-                                icon: new Icon(Icons.lock,color: Colors.blue,),
-                                labelText: 'your password',
-                                hintText: 'password',
+                            keyboardType: TextInputType.emailAddress,
+                            onChanged: OnChangeValue,
+                          ),
+                          new Padding(padding: EdgeInsets.all(10.0)),
+                          new TextField(
+                            decoration: new InputDecoration(
+                              icon: new Icon(
+                                Icons.lock,
+                                color: Colors.blue,
                               ),
-                              keyboardType: TextInputType.visiblePassword,
-                              onChanged: OnChangeValue,
+                              labelText: 'your password',
+                              hintText: 'password',
                             ),
-                            new Center(
-                              child: new Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  new Container(
-                                    margin: EdgeInsets.all(22.0),
-                                    child:   new RaisedButton(
-                                      padding: EdgeInsets.all(15.0),
-                                      color: Colors.indigo,
-                                      onPressed: ()=> Navigator.of(context).pushNamed('/HomeTabBar'),
-                                      child: new Text('Login'),textColor: Colors.white70,),
-                                  ),
-                                  new Container(
-                                    child:    new RaisedButton(
-                                      padding: EdgeInsets.all(15.0),
-                                      color: Colors.red,
-                                      onPressed: ()=> Navigator.of(context).pushNamed('/RegisterCliant'),
-                                      child: new Text('Register'),textColor: Colors.white,),
-                                  )
+                            keyboardType: TextInputType.visiblePassword,
+                            onChanged: OnChangeValue,
+                          ),
+                          new Padding(padding: EdgeInsets.all(15.0)),
+                           Text(
+                             Flutkart.forgetPassword,
+                             style: new TextStyle(color: Colors.black,fontSize: 17.0,
+                               fontStyle: FontStyle.italic,),
 
-                                ],
+
+                           ),
+                          new Padding(padding: EdgeInsets.all(10.0)),
+                          new InkWell(
+                            onTap: () => print('hello'),
+                            child: new Container(
+                              width: 200.0,
+                              height: 37.0,
+                              decoration: new BoxDecoration(
+                                color: Colors.blueAccent,
+                                border: new Border.all(color: Colors.blueAccent, width: 1.0),
+                                borderRadius: new BorderRadius.circular(25.0),
                               ),
+                              child: new Center(child: new Text('Login', style: new TextStyle(fontSize: 17.0,
+                                  color: Colors.white),),),
                             ),
-                          ],
-
-                        )
-                      ],
-                    ),
-
+                          ),
+                          new Padding(padding: EdgeInsets.all(15.0)),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              new Padding(padding: EdgeInsets.all(10.0)),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Text(
+                    Flutkart.RegisterNow,
+                    style: new TextStyle(color: Colors.red,fontSize: 19.0,
+                      fontStyle: FontStyle.normal,),
                   ),
 
-                ),
+                  new Padding(padding: EdgeInsets.all(2.0)),
+                  new  Text(
+                    Flutkart.notAccount,
+                    style: new TextStyle(color: Colors.grey,fontSize: 19.0,
+                      fontStyle: FontStyle.normal,),
 
-
-
-              ],
-            ),
-
+                  ),
+                ],
+              )
+            ],
+          ),
         ],
       ),
     );
-
-
   }
 }

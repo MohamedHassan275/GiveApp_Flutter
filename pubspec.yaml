@@ -48,6 +48,9 @@ flutter:
     - img/hospital_screen.png
     - img/logout_screen.png
     - img/logo.png
+    - img/ic_group_add.png
+    - img/rectangle.png
+    - img/register_login.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
