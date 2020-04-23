@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:give_app_flutter/Utils/flutkart.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 
@@ -14,8 +15,18 @@ class Gmaia_Details extends StatefulWidget{
 
 }
 
+
 class Gmaia_DetailsClickLister extends State<Gmaia_Details>{
 
+  final String phone = 'tel:01099323104';
+
+  callPhone() async {
+    if (await canLaunch(phone)) {
+      await launch(phone);
+    } else {
+      throw 'Could not Call Phone';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +112,7 @@ class Gmaia_DetailsClickLister extends State<Gmaia_Details>{
                   padding: EdgeInsets.all(15.0),
                   child: new Column(
                     children: <Widget>[
-                      new FloatingActionButton.extended(onPressed:()=> null,
+                      new FloatingActionButton.extended(onPressed: callPhone,
                         icon: new Icon(Icons.call,color: Colors.white,),
                         backgroundColor: Colors.deepPurple, label: new Text(Flutkart.Call,
                           style: new TextStyle(fontSize: 15,color: Colors.white),),),
