@@ -27,7 +27,7 @@ class Hospital_DetailsClickLister extends State<Hospital_Details> {
     // TODO: implement build
     return new Scaffold(
       body: new Container(
-        child: new ListView(
+        child:  new ListView(
           padding: EdgeInsets.all(10.0),
           children: <Widget>[
             new Column(

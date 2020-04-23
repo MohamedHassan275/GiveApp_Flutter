@@ -140,42 +140,16 @@ class HomeTabBarClick extends State<HomeTabBar> {
                    ),
 
                    new Container(
-                       child: new Column(
-                         children: <Widget>[
-                           new Image.asset('img/logout_screen.png',
+                       child:  new InkWell(
+                         onTap: () => Navigator.of(context).pushNamed('/LoginCliant'),
+                         child: new Container(
+                             child:  new Image.asset('img/logout_screen.png',
                                width: 200.0,
                                height: 200.0,
-                               alignment: Alignment.center),
-                         ],
-                       )
-//                  new InkWell(
-//                    onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
-//                    child: new Container(
-//                      child: new Text(
-//                        Flutkart.LogOut,
-//                        style: new TextStyle(
-//                            fontSize: 19.0, color: Colors.grey),
-//                      ),,
+                               alignment: Alignment.center,)
+                         ),
+                       ),
                    )
-//              new Row(
-//                mainAxisAlignment: MainAxisAlignment.center,
-//                children: <Widget>[
-//                  new Image.asset('img/logout_screen.png',
-//                      width: 100.0,
-//                      height: 100.0,
-//                      alignment: Alignment.center),
-////                  new InkWell(
-////                    onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
-////                    child: new Container(
-////                      child: new Text(
-////                        Flutkart.LogOut,
-////                        style: new TextStyle(
-////                            fontSize: 19.0, color: Colors.grey),
-////                      ),
-////                    ),
-////                  ),
-//                ],
-//              )
                  ],
                ),
              ],
