@@ -90,9 +90,9 @@ class RegisterClickLisner extends State<RegisterCliant> {
                                            maxLines: 1,
                                            autocorrect: false,
                                            decoration: new InputDecoration.collapsed(
-                                               hintText: Flutkart.email,
+                                               hintText: Flutkart.Name,
                                                hintStyle: new TextStyle(
-                                                   fontSize: 17.0,
+                                                   fontSize: 13.0,
                                                    fontStyle: FontStyle.normal))),
                                      ]),
                                ),
@@ -113,9 +113,33 @@ class RegisterClickLisner extends State<RegisterCliant> {
                                          decoration:
                                          //disable single line border below the text field
                                          new InputDecoration.collapsed(
-                                             hintText: Flutkart.password,
+                                             hintText: Flutkart.email,
                                              hintStyle: new TextStyle(
-                                                 fontSize: 17.0,
+                                                 fontSize: 13.0,
+                                                 fontStyle: FontStyle.normal)),
+                                       ),
+                                     ]),
+                               ),
+                               new Padding(padding: EdgeInsets.all(5.0)),
+                               new Container(
+                                 padding: EdgeInsets.all(5.0),
+                                 alignment: Alignment.center,
+                                 child: new Stack(
+                                     alignment: Alignment.center,
+                                     children: <Widget>[
+                                       Image(
+                                           image: AssetImage(
+                                               'img/edit_text_image.png')),
+                                       new TextField(
+                                         textAlign: TextAlign.center,
+                                         maxLines: 1,
+                                         autocorrect: false,
+                                         decoration:
+                                         //disable single line border below the text field
+                                         new InputDecoration.collapsed(
+                                             hintText: Flutkart.MobilePhone,
+                                             hintStyle: new TextStyle(
+                                                 fontSize: 13.0,
                                                  fontStyle: FontStyle.normal)),
                                        ),
                                      ]),
@@ -139,31 +163,7 @@ class RegisterClickLisner extends State<RegisterCliant> {
                                          new InputDecoration.collapsed(
                                              hintText: Flutkart.password,
                                              hintStyle: new TextStyle(
-                                                 fontSize: 17.0,
-                                                 fontStyle: FontStyle.normal)),
-                                       ),
-                                     ]),
-                               ),
-                               new Padding(padding: EdgeInsets.all(5.0)),
-                               new Container(
-                                 padding: EdgeInsets.all(5.0),
-                                 alignment: Alignment.center,
-                                 child: new Stack(
-                                     alignment: Alignment.center,
-                                     children: <Widget>[
-                                       Image(
-                                           image: AssetImage(
-                                               'img/edit_text_image.png')),
-                                       new TextField(
-                                         textAlign: TextAlign.center,
-                                         maxLines: 1,
-                                         autocorrect: false,
-                                         decoration:
-                                         //disable single line border below the text field
-                                         new InputDecoration.collapsed(
-                                             hintText: Flutkart.password,
-                                             hintStyle: new TextStyle(
-                                                 fontSize: 17.0,
+                                                 fontSize: 13.0,
                                                  fontStyle: FontStyle.normal)),
                                        ),
                                      ]),

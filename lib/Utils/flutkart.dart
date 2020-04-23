@@ -6,6 +6,8 @@ class Flutkart {
   static const String RegisterNow = "تسجيل جديد";
   static const String email = "email";
   static const String password = "password";
+  static const String Name = "Name";
+  static const String MobilePhone = "Mobile Phone";
   static const String Change_password = "كلة المرور";
   static const String Confirm_password = "تأكيد كلمة المرور";
   static const String Btn_Confirm_password = "تغير كلمة المرور";
