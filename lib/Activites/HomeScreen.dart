@@ -102,15 +102,26 @@ class HomeTabBarClick extends State<HomeTabBar> {
                               child: new Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  new Image.asset('img/gmaia_screen.png',
-                                      width: 100.0,
-                                      height: 100.0,
-                                      alignment: Alignment.center),
+                                  new InkWell(
+                                    onTap: () => Navigator.of(context).pushNamed('/Gmaia_Details'),
+                                    child: new Container(
+                                      child:  new Image.asset('img/gmaia_screen.png',
+                                        width: 100.0,
+                                        height: 100.0,
+                                        alignment: Alignment.center,)
+                                    ),
+                                  ),
+
                                   new Padding(padding: EdgeInsets.all(10.0)),
-                                  new Image.asset('img/hospital_screen.png',
-                                      width: 100.0,
-                                      height: 100.0,
-                                      alignment: Alignment.center),
+                                  new InkWell(
+                                    onTap: () => Navigator.of(context).pushNamed('/Hospital_Details'),
+                                    child: new Container(
+                                        child:  new Image.asset('img/hospital_screen.png',
+                                          width: 100.0,
+                                          height: 100.0,
+                                          alignment: Alignment.center,)
+                                    ),
+                                  ),
                                 ],
                               )
 
