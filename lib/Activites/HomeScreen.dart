@@ -56,94 +56,98 @@ class HomeTabBarClick extends State<HomeTabBar> {
               ),
             ),
           ),
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Padding(padding: EdgeInsets.only(bottom: 125.0)),
-              new Card(
-                elevation: 7.0,
-                margin: EdgeInsets.all(25.0),
-                child: new Container(
-                  padding: EdgeInsets.all(15.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Padding(padding: EdgeInsets.all(10.0)),
-                      new Column(
-                        children: <Widget>[
-                          new InkWell(
-                            onTap: () => null,
-                            child: new Container(
-                              child: new Text(
-                                Flutkart.ChoseHospitalOrSusality1,
-                                style: new TextStyle(
-                                    fontSize: 17.0,
-                                    color: Colors.blueGrey,
-                                    fontStyle: FontStyle.italic),
-                              ),
-                            ),
-                          ),
-                          new Padding(padding: EdgeInsets.all(2.0)),
-                          new InkWell(
-                            onTap: () => null,
-                            child: new Container(
-                              child: new Text(
-                                Flutkart.ChoseHospitalOrSusality2,
-                                style: new TextStyle(
-                                    fontSize: 17.0,
-                                    color: Colors.blueGrey,
-                                    fontStyle: FontStyle.italic),
-                              ),
-                            ),
-                          ),
-                          new Padding(padding: EdgeInsets.all(10.0)),
-                          new Container(
-                              padding: EdgeInsets.all(5.0),
-                              alignment: Alignment.center,
-                              child: new Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  new InkWell(
-                                    onTap: () => Navigator.of(context).pushNamed('/Gmaia_Details'),
-                                    child: new Container(
-                                      child:  new Image.asset('img/gmaia_screen.png',
-                                        width: 100.0,
-                                        height: 100.0,
-                                        alignment: Alignment.center,)
-                                    ),
-                                  ),
+         new Container(
+           child: new ListView(
+             padding: EdgeInsets.all(10.0),
+             children: <Widget>[
+               new Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: <Widget>[
+                   new Padding(padding: EdgeInsets.only(bottom: 125.0)),
+                   new Card(
+                     elevation: 7.0,
+                     margin: EdgeInsets.all(25.0),
+                     child: new Container(
+                       padding: EdgeInsets.all(15.0),
+                       child: new Column(
+                         children: <Widget>[
+                           new Padding(padding: EdgeInsets.all(10.0)),
+                           new Column(
+                             children: <Widget>[
+                               new InkWell(
+                                 onTap: () => null,
+                                 child: new Container(
+                                   child: new Text(
+                                     Flutkart.ChoseHospitalOrSusality1,
+                                     style: new TextStyle(
+                                         fontSize: 17.0,
+                                         color: Colors.blueGrey,
+                                         fontStyle: FontStyle.italic),
+                                   ),
+                                 ),
+                               ),
+                               new Padding(padding: EdgeInsets.all(2.0)),
+                               new InkWell(
+                                 onTap: () => null,
+                                 child: new Container(
+                                   child: new Text(
+                                     Flutkart.ChoseHospitalOrSusality2,
+                                     style: new TextStyle(
+                                         fontSize: 17.0,
+                                         color: Colors.blueGrey,
+                                         fontStyle: FontStyle.italic),
+                                   ),
+                                 ),
+                               ),
+                               new Padding(padding: EdgeInsets.all(10.0)),
+                               new Container(
+                                   padding: EdgeInsets.all(5.0),
+                                   alignment: Alignment.center,
+                                   child: new Row(
+                                     mainAxisAlignment: MainAxisAlignment.center,
+                                     children: <Widget>[
+                                       new InkWell(
+                                         onTap: () => Navigator.of(context).pushNamed('/Gmaia_Details'),
+                                         child: new Container(
+                                             child:  new Image.asset('img/gmaia_screen.png',
+                                               width: 100.0,
+                                               height: 100.0,
+                                               alignment: Alignment.center,)
+                                         ),
+                                       ),
 
-                                  new Padding(padding: EdgeInsets.all(10.0)),
-                                  new InkWell(
-                                    onTap: () => Navigator.of(context).pushNamed('/Hospital_Details'),
-                                    child: new Container(
-                                        child:  new Image.asset('img/hospital_screen.png',
-                                          width: 100.0,
-                                          height: 100.0,
-                                          alignment: Alignment.center,)
-                                    ),
-                                  ),
-                                ],
-                              )
+                                       new Padding(padding: EdgeInsets.all(10.0)),
+                                       new InkWell(
+                                         onTap: () => Navigator.of(context).pushNamed('/Hospital_Details'),
+                                         child: new Container(
+                                             child:  new Image.asset('img/hospital_screen.png',
+                                               width: 100.0,
+                                               height: 100.0,
+                                               alignment: Alignment.center,)
+                                         ),
+                                       ),
+                                     ],
+                                   )
 
-                          ),
-                          new Padding(padding: EdgeInsets.all(25.0)),
+                               ),
+                               new Padding(padding: EdgeInsets.all(25.0)),
 
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
+                             ],
+                           )
+                         ],
+                       ),
+                     ),
+                   ),
 
-              new Container(
-                child: new Column(
-                  children: <Widget>[
-                    new Image.asset('img/logout_screen.png',
-                        width: 200.0,
-                        height: 200.0,
-                        alignment: Alignment.center),
-                  ],
-                )
+                   new Container(
+                       child: new Column(
+                         children: <Widget>[
+                           new Image.asset('img/logout_screen.png',
+                               width: 200.0,
+                               height: 200.0,
+                               alignment: Alignment.center),
+                         ],
+                       )
 //                  new InkWell(
 //                    onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
 //                    child: new Container(
@@ -152,7 +156,7 @@ class HomeTabBarClick extends State<HomeTabBar> {
 //                        style: new TextStyle(
 //                            fontSize: 19.0, color: Colors.grey),
 //                      ),,
-              )
+                   )
 //              new Row(
 //                mainAxisAlignment: MainAxisAlignment.center,
 //                children: <Widget>[
@@ -172,8 +176,11 @@ class HomeTabBarClick extends State<HomeTabBar> {
 ////                  ),
 //                ],
 //              )
-            ],
-          ),
+                 ],
+               ),
+             ],
+           ),
+         )
         ],
       ),
     );

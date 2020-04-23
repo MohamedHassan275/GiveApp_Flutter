@@ -6,7 +6,16 @@ class Flutkart {
   static const String RegisterNow = "تسجيل جديد";
   static const String email = "email";
   static const String password = "password";
+  static const String Change_password = "كلة المرور";
+  static const String Confirm_password = "تأكيد كلمة المرور";
+  static const String Btn_Confirm_password = "تغير كلمة المرور";
   static const String Login = "تسجيل دخول ";
+  static const String SendEmail = "ارسال ";
+  static const String ForgetpasswordEmail = "من فضلك ادخل الايمل الخاص بك لارسال الكود لتغير كلمة السر";
+  static const String ForgetpasswordCode = "تحقق الان من الكود ";
+  static const String ForgetpasswordChangePassword = "اضافة كلمة مرور جديدة";
+  static const String CodeVerifaidNow = "تحقق الان  ";
+  static const String CodeVerifaid = "كود التحقق ";
   static const String Register = "تسجيل اشتراك";
   static const String LogOut = "تسجيل الخروج";
   static const String ChoseHospitalOrSusality1 = "اختر ما بين المستشفيات";
@@ -18,12 +27,20 @@ class Flutkart {
   static const String HospitalDetailsText = "تفاصيل عن المستشفي ";
   static const String HospitalDetails = "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي "
       "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي"
+      "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي"
+      "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي"
+      "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي"
+      "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي"
       "تقع المستشفي في القاهرة مدينة نصر في شارع 56 عباس العقاد بجوار كنتاكي";
   static const String GmaiaName = "جمعية تحيا مصر";
   static const String GmaiaAddress = "القاهرة - مدينة نصر";
   static const String GmaiaAddress2 = "56 مكرم عبيد بجوار البنك الاهلي";
   static const String GmaiaDetailsText = "تفاصيل عن الجمعية";
   static const String GmaiaDetails = "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي "
+      "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي"
+      "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي"
+      "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي"
+      "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي"
       "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي"
       "تقع الجمعية في القاهرة مدينة نصر في شارع 56 مكرم عبيد بجوار البنك الاهلي";
   static const String gotIt = "GOT IT";

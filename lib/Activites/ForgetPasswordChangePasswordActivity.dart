@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:give_app_flutter/Utils/flutkart.dart';
 
-class LoginCliant extends StatefulWidget {
+class ForgetPasswordChangePassword extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return new HomeClickLiser();
+    return new ForgetPasswordChangePasswordClickLiser();
   }
 }
 
-class HomeClickLiser extends State<LoginCliant> {
+class ForgetPasswordChangePasswordClickLiser extends State<ForgetPasswordChangePassword> {
   String MyName = '';
   String name = '';
 
@@ -60,11 +60,21 @@ class HomeClickLiser extends State<LoginCliant> {
                           children: <Widget>[
                             new Padding(padding: EdgeInsets.all(10.0)),
                             new Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                new Image.asset('img/ic_group_add.png',
-                                    width: 35.0,
-                                    height: 35.0,
-                                    alignment: Alignment.center),
+//                                new Image.asset('img/ic_group_add.png',
+//                                    width: 35.0,
+//                                    height: 35.0,
+//                                    alignment: Alignment.center),
+                             //   new Padding(padding: EdgeInsets.all(10.0)),
+                                new Text(Flutkart.ForgetpasswordChangePassword,
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                  style: new TextStyle(
+                                      color: Colors.deepPurple,
+                                      fontSize: 15,
+                                      fontStyle: FontStyle.italic
+                                  ) ,),
                                 new Padding(padding: EdgeInsets.all(10.0)),
                                 new Container(
                                   padding: EdgeInsets.all(5.0),
@@ -80,11 +90,12 @@ class HomeClickLiser extends State<LoginCliant> {
                                             maxLines: 1,
                                             autocorrect: false,
                                             decoration: new InputDecoration.collapsed(
-                                                hintText: Flutkart.email,
+                                                hintText: Flutkart.Change_password,
                                                 hintStyle: new TextStyle(
                                                     fontSize: 13.0,
                                                     fontStyle: FontStyle.normal))),
-                                      ]),
+                                      ]
+                                  ),
                                 ),
                                 new Padding(padding: EdgeInsets.all(5.0)),
                                 new Container(
@@ -94,37 +105,23 @@ class HomeClickLiser extends State<LoginCliant> {
                                       alignment: Alignment.center,
                                       children: <Widget>[
                                         new Image(
-                                          image: AssetImage(
-                                              'img/edit_text_image.png'),),
+                                            image: AssetImage(
+                                                'img/edit_text_image.png')),
                                         new TextField(
-                                          textAlign: TextAlign.center,
-                                          maxLines: 1,
-                                          autocorrect: false,
-                                          decoration:
-                                          //disable single line border below the text field
-                                          new InputDecoration.collapsed(
-                                              hintText: Flutkart.password,
-                                              hintStyle: new TextStyle(
-                                                  fontSize: 12.0,
-                                                  fontStyle: FontStyle.normal)),
-                                        ),
-                                      ]),
+                                            textAlign: TextAlign.center,
+                                            maxLines: 1,
+                                            autocorrect: false,
+                                            decoration: new InputDecoration.collapsed(
+                                                hintText: Flutkart.Confirm_password,
+                                                hintStyle: new TextStyle(
+                                                    fontSize: 13.0,
+                                                    fontStyle: FontStyle.normal))),
+                                      ]
+                                  ),
                                 ),
                                 new Padding(padding: EdgeInsets.all(15.0)),
-                             new  InkWell(
-                               onTap: ()=> Navigator.of(context).pushNamed('/ForgetPasswordEmail'),
-                               child: new Text(
-                                 Flutkart.forgetPassword,
-                                 style: new TextStyle(
-                                   color: Colors.deepPurple,
-                                   fontSize: 17.0,
-                                   fontStyle: FontStyle.italic,
-                                 ),
-                               ),
-                             ),
-                                new Padding(padding: EdgeInsets.all(10.0)),
                                 new InkWell(
-                                  onTap: ()=> Navigator.of(context).pushNamed('/HomeTabBar'),
+                                  onTap: ()=> Navigator.of(context).pushNamed('/LoginCliant'),
                                   child: new Container(
                                     width: 200,
                                     height: 35,
@@ -136,7 +133,7 @@ class HomeClickLiser extends State<LoginCliant> {
                                     ),
                                     child: new Center(
                                       child: new Text(
-                                        Flutkart.Login,
+                                        Flutkart.Btn_Confirm_password,
                                         style: new TextStyle(
                                             fontSize: 17.0, color: Colors.white),
                                       ),
@@ -150,34 +147,6 @@ class HomeClickLiser extends State<LoginCliant> {
                         ),
                       ),
                     ),
-                    new Padding(padding: EdgeInsets.all(10.0)),
-                    new Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        new InkWell(
-                          onTap: ()=> Navigator.of(context).pushNamed('/RegisterCliant'),
-                          child: new Container(
-                            child: new Text(
-                              Flutkart.RegisterNow,
-                              style: new TextStyle(
-                                  fontSize: 19.0, color: Colors.red),
-                            ),
-                          ),
-                        ),
-
-                        new Padding(padding: EdgeInsets.all(2.0)),
-                        new InkWell(
-                          onTap: ()=> Navigator.of(context).pushNamed('/RegisterCliant'),
-                          child: new Container(
-                            child: new Text(
-                              Flutkart.notAccount,
-                              style: new TextStyle(
-                                  fontSize: 19.0, color: Colors.grey),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
                   ],
                 ),
               ],

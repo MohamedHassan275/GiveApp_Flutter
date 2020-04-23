@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:give_app_flutter/Activites/SplashScreen.dart';
+import 'Activites/ForgetPasswordChangePasswordActivity.dart';
+import 'Activites/ForgetPasswordCodeActivity.dart';
+import 'Activites/ForgetPasswordEmailActivity.dart';
 import 'Activites/Gmaia_DetailsActivity.dart';
 import 'Activites/HomeScreen.dart';
 import 'Activites/Hospital_DetailsActivity.dart';
@@ -20,6 +23,10 @@ var  routes =  <String ,WidgetBuilder>{
   '/LoginCliant' : (BuildContext context) => new LoginCliant(),
   '/HomeTabBar' : (BuildContext context) => new HomeTabBar(),
   '/Hospital_Details' : (BuildContext context) => new Hospital_Details(),
-  '/Gmaia_Details' : (BuildContext context) => new Gmaia_Details()
+  '/Gmaia_Details' : (BuildContext context) => new Gmaia_Details(),
+  '/ForgetPasswordEmail' : (BuildContext context) => new ForgetPasswordEmail(),
+  '/ForgetPasswordCode' : (BuildContext context) => new ForgetPasswordCode(),
+  '/ForgetPasswordChangePassword' : (BuildContext context) => new ForgetPasswordChangePassword(),
+
 };
 
